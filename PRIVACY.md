@@ -17,9 +17,11 @@ itself, or any other bot.
 
 To function, the Bot processes the following through Discord's API:
 
-- **Message content** — read only to detect its command prefix (`f`) and the
-  command arguments (for example `froom stadium` or `fbattle 15:30`). The Bot
-  only acts on messages from users who hold specific authorized staff roles;
+- **Message content** — read only to detect a formation command: the letter `f`
+  followed by a formation abbreviation (for example `fb`, `fa`, `fa2`), typed by
+  authorized staff to post that formation's diagram. All of the Bot's other
+  features use Discord slash commands, which do not expose message content. The
+  Bot only acts on messages from users who hold specific authorized staff roles;
   all other messages are ignored.
 - **User IDs** — used momentarily to know who issued a command (for example, to
   run a personal practice session or mention the user in a reply).
